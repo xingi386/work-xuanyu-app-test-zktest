@@ -45,7 +45,6 @@ public class ZkTestApp  {
     printConfiguration();
     ensureBasePath();
     initZkTestTask();
-    start();
   }
 
   public void initZkTestTask(){
@@ -97,7 +96,7 @@ public class ZkTestApp  {
       return new ScheduledThreadPoolExecutor(zkTestConfig.getTaskThreadPoolSize());
   }
 
-  private  void start(){
+  public  void start(){
     taskList.stream().forEach(
         (task)->{
           scheduledThreadPoolExecutor.scheduleWithFixedDelay(

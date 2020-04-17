@@ -134,13 +134,17 @@ public class ZkTestTask  implements Runnable {
     void doOperation() throws IOException, InterruptedException, KeeperException  ;
   }
 
-  private long calcOperationTime(Operation op) throws IOException, InterruptedException, KeeperException{
+  private long calcOperationTime(Operation op) {
     long operationBeginTimeMillis;
     long operationEndTimeMillis;
     long operationTime ;
 
     operationBeginTimeMillis = System.currentTimeMillis();
-    op.doOperation();
+    try {
+      op.doOperation();
+    } catch (Exception e) {
+     log.error("{}操作失败",name,e);
+    }
     operationEndTimeMillis = System.currentTimeMillis();
 
     operationTime = operationEndTimeMillis-operationBeginTimeMillis;

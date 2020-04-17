@@ -14,9 +14,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="zktest" target="11" />
-      <module name="zktest-log" target="11" />
-      <module name="zktest-main" target="11" />
+      <module name="zktest" target="1.8" />
+      <module name="zktest-log" target="1.8" />
+      <module name="zktest-main" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
