@@ -30,7 +30,7 @@
 
         <zookeeper.version>3.4.7</zookeeper.version>
 
-        <mysql.connector.java.version>8.0.17</mysql.connector.java.version>
+        <mysql.connector.java.version>8.0.28</mysql.connector.java.version>
     </properties>
 
 
